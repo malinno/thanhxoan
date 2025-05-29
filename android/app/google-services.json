@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "382568716448",
+    "project_id": "z-solution-tranvuthu",
+    "storage_bucket": "z-solution-tranvuthu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382568716448:android:7de39d8fd580d41e0211c5",
+        "android_client_info": {
+          "package_name": "vn.zsolution.tranvuthu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIrV6RFhhkV3T6NOZNmV1IL07q5veIS8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382568716448:android:7fb39b05c443ab0b0211c5",
+        "android_client_info": {
+          "package_name": "vn.zsolution.tranvuthu.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIrV6RFhhkV3T6NOZNmV1IL07q5veIS8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name" translatable="false">Thanh Xoan</string>
+    <string name="app_name_debug" translatable="false">Thanh Xoan</string>
+    <string name="app_id" translatable="false">vn.zsolution.thanhxoan</string>
+    <string name="app_id_debug" translatable="false">vn.zsolution.thanhxoan.debug</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">
+		@string/CODEPUSH_ANDROID_DEPLOYMENT_KEY
+	</string>
+    <string name="CodePushPublicKey" translatable="false">
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnS516sqJGhBdwSHIVmIh
+3HVY3lPHCd4uLAhiv788IvMbtDHEtk0jM9VOnEdh7eGcw4CH4luFl5NfmGYpfRHQ
+mTfFYtJCDl0mxmdasLF/vdjV2SuYFg6ZZ+NOk8AOdCJtiX07QtliicACQV7gwRxA
+UUw6KybXTl/ion2joZO+X3fYfMWqUMgCODR1n13uOfjZ0tjeSECYxfY5PJ2KtWpU
+27WXj7j2N1BjS3KU9LITlHnHJIPxMwBFMWltIDm6RI3JHKgA0GQV7IgKuVF0H7jP
+box+caM0eHGyMWMytZQyAx7HF2q9v1g+sbLLCdPKjmiZX0MqC66XRSjs//dFAKmL
+iwIDAQAB
+-----END PUBLIC KEY-----
+	</string>
+</resources>

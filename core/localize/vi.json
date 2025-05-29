@@ -1,0 +1,21 @@
+{
+  "common": {
+    "and": "Và",
+    "or": "Hoặc",
+    "confirm": "Xác nhận",
+    "searching": "Đang tìm kiếm",
+    "approved": "Đã duyệt",
+    "new": "Mới",
+    "canceled": "Đã huỷ"
+  },
+  "tab": {
+    "home": "Trang chủ",
+    "clients": "Khách hàng",
+    "create_order": "Lên đơn",
+    "orders": "Đơn NPP",
+    "others": "Mở rộng"
+  },
+  "delivery_address": {
+    "choose_address": "Chọn địa chỉ"
+  }
+}

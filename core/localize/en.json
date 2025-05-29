@@ -1,0 +1,21 @@
+{
+  "common": {
+    "and": "And",
+    "or": "Or",
+    "confirm": "Confirm",
+    "searching": "Searching",
+    "approved": "Approved",
+    "new": "New",
+    "canceled": "Canceled"
+  },
+  "tab": {
+    "home": "Home",
+    "clients": "Client",
+    "create_order": "Create order",
+    "orders": "Orders",
+    "others": "Others"
+  },
+  "delivery_address": {
+    "choose_address": "Choose address"
+  }
+}

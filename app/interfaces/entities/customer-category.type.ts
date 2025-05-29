@@ -1,0 +1,1 @@
+export type CustomerCategoryType = 'agency' | 'distributor' | 'undefined'

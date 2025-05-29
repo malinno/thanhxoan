@@ -1,0 +1,48 @@
+diff --git a/node_modules/react-native-switch-toggle/lib/index.d.ts b/node_modules/react-native-switch-toggle/lib/index.d.ts
+index 4732021..495f0a2 100644
+--- a/node_modules/react-native-switch-toggle/lib/index.d.ts
++++ b/node_modules/react-native-switch-toggle/lib/index.d.ts
+@@ -25,6 +25,7 @@ interface Props {
+     rightContainerStyle?: StyleProp<ViewStyle>;
+     leftContainerStyle?: StyleProp<ViewStyle>;
+     RTL?: boolean;
++    TextComponent?: React.ElementType;
+ }
+ declare function SwitchToggle(props: Props): React.ReactElement;
+ declare namespace SwitchToggle {
+diff --git a/node_modules/react-native-switch-toggle/lib/index.js b/node_modules/react-native-switch-toggle/lib/index.js
+index ee159eb..ebbe9b2 100644
+--- a/node_modules/react-native-switch-toggle/lib/index.js
++++ b/node_modules/react-native-switch-toggle/lib/index.js
+@@ -37,6 +37,7 @@ function SwitchToggle(props) {
+     var circlePosXStart = useState(getStart())[0];
+     var prevSwitchOnRef = useRef();
+     var prevSwitchOn = !!prevSwitchOnRef.current;
++    var TextComponent = props.TextComponent || Text
+     useEffect(function () {
+         prevSwitchOnRef.current = props.switchOn;
+         if (prevSwitchOn !== props.switchOn)
+@@ -44,12 +45,12 @@ function SwitchToggle(props) {
+     }, [prevSwitchOn, props.switchOn, runAnimation]);
+     var generateRightText = function () {
+         return (<Animated.View style={props.rightContainerStyle}>
+-        <Text style={props.textRightStyle}>{props.backTextRight}</Text>
++        <TextComponent style={props.textRightStyle}>{props.backTextRight}</TextComponent>
+       </Animated.View>);
+     };
+     var generateLeftText = function () {
+         return (<Animated.View style={props.leftContainerStyle}>
+-        <Text style={props.textLeftStyle}>{props.backTextLeft}</Text>
++        <TextComponent style={props.textLeftStyle}>{props.backTextLeft}</TextComponent>
+       </Animated.View>);
+     };
+     var generateLeftIcon = function () {
+@@ -101,7 +102,7 @@ function SwitchToggle(props) {
+             props.buttonStyle,
+         ]}>
+           <Animated.View style={props.buttonContainerStyle}>
+-            <Text style={props.buttonTextStyle}>{props.buttonText}</Text>
++            <TextComponent style={props.buttonTextStyle}>{props.buttonText}</TextComponent>
+           </Animated.View>
+         </Animated.View>
+         {generateRightText()}

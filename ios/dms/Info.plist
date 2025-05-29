@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Thanh Xoan</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CodePushDeploymentKey</key>
+	<string>$(CODEPUSH_IOS_DEPLOYMENT_KEY)</string>
+	<key>CodePushPublicKey</key>
+	<string>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnS516sqJGhBdwSHIVmIh
+3HVY3lPHCd4uLAhiv788IvMbtDHEtk0jM9VOnEdh7eGcw4CH4luFl5NfmGYpfRHQ
+mTfFYtJCDl0mxmdasLF/vdjV2SuYFg6ZZ+NOk8AOdCJtiX07QtliicACQV7gwRxA
+UUw6KybXTl/ion2joZO+X3fYfMWqUMgCODR1n13uOfjZ0tjeSECYxfY5PJ2KtWpU
+27WXj7j2N1BjS3KU9LITlHnHJIPxMwBFMWltIDm6RI3JHKgA0GQV7IgKuVF0H7jP
+box+caM0eHGyMWMytZQyAx7HF2q9v1g+sbLLCdPKjmiZX0MqC66XRSjs//dFAKmL
+iwIDAQAB
+-----END PUBLIC KEY-----
+</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập Apple Music.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập Bluetooth để kết nối với các thiết bị xung quanh.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập Bluetooth để kết nối với các thiết bị xung quanh.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập lịch để nhắc nhở sự kiện.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Ứng dụng sử dụng quyền truy cập camera để có thể tải ảnh lên, thay đổi ảnh đại diện, sử dụng hình ảnh để gửi tin nhắn.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Sử dụng danh bạ của bạn để xác định bạn bè đang sử dụng ứng dụng F99.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Ứng dụng sử dụng quyền truy cập định vị để có thể xác định vị trí của bạn, giúp bạn thiết lập địa chỉ nhanh hơn.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Ứng dụng sử dụng quyền truy cập định vị để có thể xác định vị trí của bạn, giúp bạn thiết lập địa chỉ nhanh hơn.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Ứng dụng sử dụng quyền truy cập micro để có thể thu âm thanh từ video</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập tính năng bắt chuyển động của thiết bị.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Ứng dụng sử dụng quyền truy cập thư viện ảnh để có thể tải ảnh lên, thay đổi ảnh đại diện, sử dụng hình ảnh để gửi tin nhắn.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập tính năng trợ lý ảo Siri.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Ứng dụng muốn sử dụng quyền truy cập tính năng nhận diện giọng nói.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BeVietnamPro-Black.ttf</string>
+		<string>BeVietnamPro-BlackItalic.ttf</string>
+		<string>BeVietnamPro-Bold.ttf</string>
+		<string>BeVietnamPro-BoldItalic.ttf</string>
+		<string>BeVietnamPro-ExtraBold.ttf</string>
+		<string>BeVietnamPro-ExtraBoldItalic.ttf</string>
+		<string>BeVietnamPro-ExtraLight.ttf</string>
+		<string>BeVietnamPro-ExtraLightItalic.ttf</string>
+		<string>BeVietnamPro-Italic.ttf</string>
+		<string>BeVietnamPro-Light.ttf</string>
+		<string>BeVietnamPro-LightItalic.ttf</string>
+		<string>BeVietnamPro-Medium.ttf</string>
+		<string>BeVietnamPro-MediumItalic.ttf</string>
+		<string>BeVietnamPro-Regular.ttf</string>
+		<string>BeVietnamPro-SemiBold.ttf</string>
+		<string>BeVietnamPro-SemiBoldItalic.ttf</string>
+		<string>BeVietnamPro-Thin.ttf</string>
+		<string>BeVietnamPro-ThinItalic.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen.storyboard</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

@@ -1,0 +1,1 @@
+export const DEFAULT_FONTSIZE = 14

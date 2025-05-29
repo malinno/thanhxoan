@@ -1,0 +1,112 @@
+diff --git a/node_modules/react-native-autocomplete-dropdown/src/LeftButton.js b/node_modules/react-native-autocomplete-dropdown/src/LeftButton.js
+new file mode 100644
+index 0000000..6c9bbaf
+--- /dev/null
++++ b/node_modules/react-native-autocomplete-dropdown/src/LeftButton.js
+@@ -0,0 +1,48 @@
++import React, { memo } from 'react'
++import { StyleSheet, TouchableOpacity, View } from 'react-native'
++
++export const LeftButton = memo(
++  ({
++    inputHeight,
++    buttonsContainerStyle,
++    LeftIconComponent,
++    onLeftIconComponentPress
++  }) => {
++
++    return (
++      <View
++        style={{
++          ...styles.container,
++          height: inputHeight,
++          ...buttonsContainerStyle
++        }}>
++        {LeftIconComponent && (
++          <TouchableOpacity 
++            style={styles.chevronButton}
++            onPress={onLeftIconComponentPress}>
++            {LeftIconComponent}
++          </TouchableOpacity>
++        )}
++      </View>
++    )
++  }
++)
++
++const styles = StyleSheet.create({
++  container: {
++    flex: 0,
++    flexDirection: 'row',
++    left: 8,
++    zIndex: 10,
++    justifyContent: 'center',
++    alignItems: 'center',
++    backgroundColor: 'transparent'
++  },
++  chevronButton: {
++    width: 26,
++    height: 26,
++    alignItems: 'center',
++    height: '100%',
++    justifyContent: 'center'
++  }
++})
+diff --git a/node_modules/react-native-autocomplete-dropdown/src/index.d.ts b/node_modules/react-native-autocomplete-dropdown/src/index.d.ts
+index ce811c1..0088a9b 100644
+--- a/node_modules/react-native-autocomplete-dropdown/src/index.d.ts
++++ b/node_modules/react-native-autocomplete-dropdown/src/index.d.ts
+@@ -55,6 +55,7 @@ interface AutocompleteDropdownProps {
+   onClear?: () => void;
+   onChevronPress?: () => void;
+   onRightIconComponentPress?: () => void;
++  onLeftIconComponentPress?: () => void;
+   onSubmit?: TextInputProps['onSubmitEditing'];
+   onBlur?: TextInputProps['onBlur'];
+   onFocus?: TextInputProps['onFocus'];
+@@ -62,10 +63,12 @@ interface AutocompleteDropdownProps {
+   containerStyle?: StyleProp<ViewStyle>;
+   inputContainerStyle?: StyleProp<ViewStyle>;
+   rightButtonsContainerStyle?: StyleProp<ViewStyle>;
++  leftButtonsContainerStyle?: StyleProp<ViewStyle>;
+   suggestionsListContainerStyle?: StyleProp<ViewStyle>;
+   suggestionsListTextStyle?: StyleProp<TextStyle>;
+   ChevronIconComponent?: JSX.Element;
+   RightIconComponent?: JSX.Element;
++  LeftIconComponent?: JSX.Element;
+   ClearIconComponent?: JSX.Element;
+   InputComponent?: React.ComponentType;
+   ItemSeparatorComponent?: JSX.Element;
+diff --git a/node_modules/react-native-autocomplete-dropdown/src/index.js b/node_modules/react-native-autocomplete-dropdown/src/index.js
+index 36efb60..4688d71 100644
+--- a/node_modules/react-native-autocomplete-dropdown/src/index.js
++++ b/node_modules/react-native-autocomplete-dropdown/src/index.js
+@@ -16,6 +16,7 @@ import { moderateScale, ScaledSheet } from 'react-native-size-matters'
+ import { NothingFound } from './NothingFound'
+ import { RightButton } from './RightButton'
+ import { ScrollViewListItem } from './ScrollViewListItem'
++import { LeftButton } from 'react-native-autocomplete-dropdown/src/LeftButton'
+ 
+ export const AutocompleteDropdown = memo(
+   forwardRef((props, ref) => {
+@@ -275,6 +276,11 @@ export const AutocompleteDropdown = memo(
+           ref={containerRef}
+           onLayout={_ => {}}
+           style={[styles.inputContainerStyle, props.inputContainerStyle]}>
++          <LeftButton 
++            inputHeight={inputHeight} 
++            buttonsContainerStyle={props.leftButtonsContainerStyle} 
++            LeftIconComponent={props.LeftIconComponent}
++            onLeftIconComponentPress={props.onLeftIconComponentPress}/>
+           <InputComponent
+             ref={inputRef}
+             value={searchText}
+@@ -377,7 +383,7 @@ const styles = ScaledSheet.create({
+     flexGrow: 1,
+     flexShrink: 1,
+     overflow: 'hidden',
+-    paddingHorizontal: 13,
++    paddingHorizontal: 12,
+     fontSize: 16
+   }
+ })

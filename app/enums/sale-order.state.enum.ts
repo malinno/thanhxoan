@@ -1,0 +1,15 @@
+export enum SaleOrderState {
+  rfq = 'rfq',
+  verified = 'verified',
+  paid = 'paid',
+  confirmed = 'confirmed',
+  chogiao = 'chogiao',
+  shipping = 'shipping',
+  reshipping = 'reshipping',
+  returning = 'returning',
+  returned = 'returned',
+  to_reship = 'to_reship',
+  chogiaolai = 'chogiaolai',
+  completed = 'completed',
+  cancel = 'cancel',
+}

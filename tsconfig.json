@@ -1,0 +1,14 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@images": ["resources/images/index"],
+      "@core/*": ["core/*"],
+      "@api/*": ["core/api/*"],
+      "@app/*": ["app/*"],
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

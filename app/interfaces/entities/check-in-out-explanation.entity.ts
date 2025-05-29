@@ -1,0 +1,40 @@
+import { CheckIOExplanationStatus } from '@app/enums/check-io-explanation-status.enum';
+import { ErpBaseEntity } from './erp-base.entity';
+import { ErpCustomer } from './erp-customer.entity';
+import { CheckIOExplanationState } from '@app/enums/check-io-explanation-state.enum';
+
+export interface CheckInOutExplanation extends ErpBaseEntity {
+  cico_id: number;
+  store_id: ErpCustomer;
+  address_town_id: [number, string];
+  address_district_id: [number, string];
+  address_state_id: [number, string];
+  salesperson_id: [number, string];
+  team_id: [number, string];
+  cmp_id: [number, string];
+  router_plan_id: [number, string];
+  detail_router_plan_id: [number, string];
+  sla_ref_id: [number, string];
+  sla_state: string;
+  note?: string;
+  state: CheckIOExplanationState;
+  visiting_time: number;
+  check_in: string;
+  checkin_longitude: number;
+  checkin_latitude: number;
+  checkin_address: string;
+  check_out: string;
+  checkout_longitude: number;
+  checkout_latitude: number;
+  checkout_address: string;
+  visiting_rate: string;
+  ev_distance_deviation_rate: string;
+  ev_distance_deviation_checkout_rate: string;
+  images_count_rate: string;
+  is_open?: boolean;
+  status: CheckIOExplanationStatus;
+  reason_explanation: string;
+  checkout_date: string;
+  reason_cico_id: [number, string];
+  attachment_image_ids: string[];
+}

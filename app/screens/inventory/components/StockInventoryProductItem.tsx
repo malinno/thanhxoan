@@ -1,0 +1,103 @@
+import HStack from '@app/components/HStack';
+import { StockInventoryLine } from '@app/interfaces/entities/stock-inventory-line.entity';
+import Text from '@core/components/Text';
+import Touchable from '@core/components/Touchable';
+import { colors } from '@core/constants/colors.constant';
+import images from '@images';
+import React, { FC, memo, useCallback } from 'react';
+import { Image, StyleSheet, View, ViewProps } from 'react-native';
+
+interface Props extends ViewProps {
+  index: number;
+  data: StockInventoryLine;
+  onPress?: (item: StockInventoryLine, index: number) => void;
+}
+
+const StockInventoryProductItem: FC<Props> = memo(
+  ({ data, index, style, onPress, ...props }) => {
+    const _onPress = () => onPress?.(data, index);
+
+    return (
+      <Touchable
+        activeOpacity={1}
+        style={[styles.item, style]}
+        onPress={_onPress}>
+        <HStack style={styles.header}>
+          <Text style={styles.productName}>{data.product_id.name}</Text>
+          <Text style={styles.unit}>{data.product_id.uom_id?.[1]}</Text>
+        </HStack>
+        <View style={styles.separator} />
+        <View style={styles.body}>
+          <HStack>
+            <Image source={images.common.barcode} tintColor={colors.primary} />
+            <Text style={styles.barcodeText}>{data.product_id.barcode}</Text>
+          </HStack>
+          <HStack style={{ marginTop: 8 }}>
+            <Text>Tồn hiện có: {data.product_qty}</Text>
+          </HStack>
+          <HStack style={{ marginTop: 4 }}>
+            <Text style={{ flex: 1 }}>Đếm được</Text>
+            <View style={styles.quantityContainer}>
+              <Text style={styles.quantity}>{Number(data.count_qty)}</Text>
+            </View>
+          </HStack>
+        </View>
+      </Touchable>
+    );
+  },
+);
+
+export default StockInventoryProductItem;
+
+const styles = StyleSheet.create({
+  item: {
+    backgroundColor: colors.white,
+    borderRadius: 8,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: colors.colorEFF0F4,
+  },
+  header: {
+    paddingBottom: 8,
+  },
+  separator: {
+    height: 1,
+    backgroundColor: colors.colorE3E5E8,
+  },
+  body: {
+    paddingTop: 12,
+  },
+  productName: {
+    flex: 1,
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.color161616,
+  },
+  barcode: {
+    marginTop: 6,
+  },
+  barcodeText: {
+    marginLeft: 8,
+  },
+  quantityContainer: {
+    minWidth: 68,
+    paddingHorizontal: 13,
+    paddingVertical: 6,
+    borderWidth: 1,
+    borderColor: colors.colorE7E7E7,
+    borderRadius: 4,
+  },
+  quantity: {
+    width: '100%',
+    textAlign: 'center',
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: colors.color161616,
+  },
+  unit: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: colors.color6B7A90,
+    marginTop: 4,
+  },
+});
