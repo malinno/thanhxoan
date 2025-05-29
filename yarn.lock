@@ -2080,23 +2080,23 @@
   dependencies:
     invariant "^2.2.4"
 
-"@react-native-firebase/analytics@^20.0.0":
+"@react-native-firebase/analytics@20.0.0":
   version "20.0.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-20.0.0.tgz#162ec36b758f664ff56725f6943bdb08150381e7"
   integrity sha512-FSTr/FwzJOVYpUyd4xFWjeC0hPT9vwtwK4tObzAk4FDwgT6xZ/SrfkMTNh4PJHQX8RltqN5YZ85n8NenG3OGgw==
 
-"@react-native-firebase/app@^19.2.2":
-  version "19.2.2"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-19.2.2.tgz#71db0afdfaa41fff1fc75ce9f5c249eeeec393e3"
-  integrity sha512-yucIZT/n567XH+gU8Qf/Z8Awtrc0dadu0LYDJU/dq228DwoQa8xyCoDqXqVM2Ppj9R8csQ+ga4VdMYBSHblYQw==
+"@react-native-firebase/app@20.0.0":
+  version "20.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-20.0.0.tgz#0aae0fdaaa0db48f6b248fb410e18687e285f2e1"
+  integrity sha512-h9Xgmj0Z0ga1ponhDnQ63yqkX288LOW+ZvstDWHDo2rgPu58nbAmdzs73MTmPjYdgm5Elm71puG1NRJX5n7wRw==
   dependencies:
     opencollective-postinstall "^2.0.3"
     superstruct "^0.6.2"
 
-"@react-native-firebase/crashlytics@^19.2.2":
-  version "19.2.2"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/crashlytics/-/crashlytics-19.2.2.tgz#828367d24e3eddbd35a04946653e50f60424c8fe"
-  integrity sha512-1dy8QkbFHNUVzlmU6zB99IQO/0rrWUHjiBJaOlWDYlVRoRuf/n7E/z2avpGqsYH52ujSfVhlYR2FBRXsVSzVcg==
+"@react-native-firebase/crashlytics@20.0.0":
+  version "20.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/crashlytics/-/crashlytics-20.0.0.tgz#ced4fe82b6b3d7ae6ad4b4934e3b92357e4f1a8a"
+  integrity sha512-xRh7q/+l3On+w6QJe6KjTxuI7CDwsBYj6tuqakkTPcjiTMu89OuDlAoQyQ+veaRKw3TFMT6HNvS1s6saJm+GIg==
   dependencies:
     stacktrace-js "^2.0.2"
 
